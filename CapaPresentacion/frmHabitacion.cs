@@ -52,5 +52,54 @@ namespace CapaPresentacion
                 });
             }
         }
+
+        private void dgvdata_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+
+            if (e.ColumnIndex == 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var w = Properties.Resources.Check.Width;
+                var h = Properties.Resources.Check.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(Properties.Resources.Check, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+        }
+
+        private void dgvdata_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvdata.Columns[e.ColumnIndex].Name == "Btnseleccionar")
+            {
+                int indice = e.RowIndex;
+                if (indice >= 0)
+                {
+                    txtindice.Text = indice.ToString();
+                    txtidhab.Text = dgvdata.Rows[indice].Cells["Id"].Value.ToString();
+                    txtcodigo.Text = dgvdata.Rows[indice].Cells["codigo"].Value.ToString();
+                    txtnumero.Text = dgvdata.Rows[indice].Cells["numero"].Value.ToString();
+                    txtcantidad.Text = dgvdata.Rows[indice].Cells["cantidad"].Value.ToString();
+                    txtpersona.Text = dgvdata.Rows[indice].Cells["numeropersonas"].Value.ToString();
+                    txtprecio.Text = dgvdata.Rows[indice].Cells["precio"].Value.ToString();
+
+              
+                    foreach (OpcionCombo oc in cbmestado.Items)
+                    {
+                        if (Convert.ToInt32(oc.Valor) == Convert.ToInt32(dgvdata.Rows[indice].Cells["estadovalor"].Value.ToString()))
+                        {
+                            int indice_combo = cbmestado.Items.IndexOf(oc);
+                            cbmestado.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

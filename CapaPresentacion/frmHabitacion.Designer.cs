@@ -51,11 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnlimpiarbuscador = new FontAwesome.Sharp.IconButton();
-            this.btnbuscar = new FontAwesome.Sharp.IconButton();
-            this.btneliminar = new FontAwesome.Sharp.IconButton();
-            this.btnlimpiar = new FontAwesome.Sharp.IconButton();
-            this.btnguardar = new FontAwesome.Sharp.IconButton();
             this.Btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +60,11 @@
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadovalor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnlimpiarbuscador = new FontAwesome.Sharp.IconButton();
+            this.btnbuscar = new FontAwesome.Sharp.IconButton();
+            this.btneliminar = new FontAwesome.Sharp.IconButton();
+            this.btnlimpiar = new FontAwesome.Sharp.IconButton();
+            this.btnguardar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,6 +161,8 @@
             this.dgvdata.RowTemplate.Height = 28;
             this.dgvdata.Size = new System.Drawing.Size(718, 387);
             this.dgvdata.TabIndex = 56;
+            this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellContentClick);
+            this.dgvdata.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvdata_CellPainting);
             // 
             // cbmestado
             // 
@@ -292,6 +294,75 @@
             this.label1.Size = new System.Drawing.Size(265, 531);
             this.label1.TabIndex = 37;
             // 
+            // Btnseleccionar
+            // 
+            this.Btnseleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Btnseleccionar.FillWeight = 150F;
+            this.Btnseleccionar.HeaderText = "";
+            this.Btnseleccionar.Name = "Btnseleccionar";
+            this.Btnseleccionar.ReadOnly = true;
+            this.Btnseleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Btnseleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Btnseleccionar.Text = "    ";
+            this.Btnseleccionar.Width = 23;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id_habitacion";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            this.Id.Width = 50;
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Codigo Habitacion";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 120;
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "Numero de Habitacion";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            this.numero.Width = 120;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad de camas";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            this.cantidad.Width = 120;
+            // 
+            // numeropersonas
+            // 
+            this.numeropersonas.HeaderText = "Numero de Personas";
+            this.numeropersonas.Name = "numeropersonas";
+            this.numeropersonas.ReadOnly = true;
+            this.numeropersonas.Width = 120;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            this.precio.Width = 70;
+            // 
+            // estadovalor
+            // 
+            this.estadovalor.HeaderText = "Estado Valor";
+            this.estadovalor.Name = "estadovalor";
+            this.estadovalor.ReadOnly = true;
+            this.estadovalor.Visible = false;
+            // 
+            // estado
+            // 
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Width = 70;
+            // 
             // btnlimpiarbuscador
             // 
             this.btnlimpiarbuscador.BackColor = System.Drawing.Color.White;
@@ -389,75 +460,6 @@
             this.btnguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnguardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnguardar.UseVisualStyleBackColor = false;
-            // 
-            // Btnseleccionar
-            // 
-            this.Btnseleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Btnseleccionar.FillWeight = 150F;
-            this.Btnseleccionar.HeaderText = "";
-            this.Btnseleccionar.Name = "Btnseleccionar";
-            this.Btnseleccionar.ReadOnly = true;
-            this.Btnseleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Btnseleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Btnseleccionar.Text = "    ";
-            this.Btnseleccionar.Width = 23;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id_habitacion";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            this.Id.Width = 50;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Codigo Habitacion";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            this.codigo.Width = 120;
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "Numero de Habitacion";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
-            this.numero.Width = 120;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad de camas";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            this.cantidad.Width = 120;
-            // 
-            // numeropersonas
-            // 
-            this.numeropersonas.HeaderText = "Numero de Personas";
-            this.numeropersonas.Name = "numeropersonas";
-            this.numeropersonas.ReadOnly = true;
-            this.numeropersonas.Width = 120;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            this.precio.Width = 70;
-            // 
-            // estadovalor
-            // 
-            this.estadovalor.HeaderText = "Estado Valor";
-            this.estadovalor.Name = "estadovalor";
-            this.estadovalor.ReadOnly = true;
-            this.estadovalor.Visible = false;
-            // 
-            // estado
-            // 
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            this.estado.Width = 70;
             // 
             // frmHabitacion
             // 

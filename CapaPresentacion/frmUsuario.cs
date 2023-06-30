@@ -69,13 +69,35 @@ namespace CapaPresentacion
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            dgvdata.Rows.Add(new object[] { "", txtidusuario.Text,txtnombre.Text,txtci.Text,txtcuenta.Text,txtpassword.Text,
+            string mensaje = string.Empty;
+            Usuario objusuario = new Usuario()
+            {
+                id_usuario = Convert.ToInt32(txtidusuario.Text),
+                ci = Convert.ToInt32(txtci.Text),
+                nombreCompleto = txtnombre.Text,
+                cuenta = txtcuenta.Text,
+                pasword = txtpassword.Text,
+                oRol = new Rol() { id_rol = Convert.ToInt32(((OpcionCombo)cbmrol.SelectedItem).Valor)},
+                estado = Convert.ToInt32(((OpcionCombo)cbmestado.SelectedItem).Valor) == 1 ? true : false
+            };
+            int idusuariogenerado = new CN_Usuario().Registrar(objusuario, out mensaje);
+
+            if(idusuariogenerado != 0)
+            {
+                dgvdata.Rows.Add(new object[] { "", idusuariogenerado,txtnombre.Text,txtci.Text,txtcuenta.Text,txtpassword.Text,
                 ((OpcionCombo)cbmrol.SelectedItem).Valor.ToString(),
                 ((OpcionCombo)cbmrol.SelectedItem).Texto.ToString(),
                 ((OpcionCombo)cbmestado.SelectedItem).Valor.ToString(),
                 ((OpcionCombo)cbmestado.SelectedItem).Texto.ToString()
-            });
-            limpiar();
+                });
+                limpiar();
+            }
+            else
+            {
+                MessageBox.Show(mensaje);
+            }
+            
+            
         }
 
         private void limpiar()
