@@ -1,0 +1,11 @@
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaNegocio\obj\Debug\CapaNegocio.pdb

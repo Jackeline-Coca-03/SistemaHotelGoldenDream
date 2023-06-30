@@ -1,0 +1,9 @@
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaDatos\obj\Debug\CapaDatos.pdb

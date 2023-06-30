@@ -1,0 +1,6 @@
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\UNSXX-214\Documents\ACTUALIZACION\DOCEN\PROYECTO\VISUAL_PROY\SystemHotelGoldeDREAM\CapaEntidad\obj\Debug\CapaEntidad.pdb
