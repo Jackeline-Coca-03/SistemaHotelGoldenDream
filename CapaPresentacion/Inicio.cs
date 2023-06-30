@@ -99,5 +99,10 @@ namespace CapaPresentacion
         {
             AbrirFormulario((IconMenuItem)sender, new frmReportes());
         }
+
+        private void iconMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
