@@ -33,24 +33,24 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rgbhospedaje = new System.Windows.Forms.GroupBox();
+            this.txtfechas = new System.Windows.Forms.TextBox();
+            this.txtfechai = new System.Windows.Forms.TextBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.txtfechar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.txtfechai = new System.Windows.Forms.TextBox();
-            this.txtfechas = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnbuscarcliente = new FontAwesome.Sharp.IconButton();
             this.txtnombrecliente = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtcicliente = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnbuscarcliente = new FontAwesome.Sharp.IconButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnbuscarhab = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -64,7 +64,6 @@
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnagregar = new FontAwesome.Sharp.IconButton();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -72,9 +71,10 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnagregar = new FontAwesome.Sharp.IconButton();
             this.rgbhospedaje.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -123,6 +123,88 @@
             this.rgbhospedaje.TabStop = false;
             this.rgbhospedaje.Text = "Informacion Hospedaje";
             // 
+            // txtfechas
+            // 
+            this.txtfechas.Location = new System.Drawing.Point(427, 55);
+            this.txtfechas.Name = "txtfechas";
+            this.txtfechas.Size = new System.Drawing.Size(99, 20);
+            this.txtfechas.TabIndex = 19;
+            // 
+            // txtfechai
+            // 
+            this.txtfechai.Location = new System.Drawing.Point(427, 26);
+            this.txtfechai.Name = "txtfechai";
+            this.txtfechai.Size = new System.Drawing.Size(99, 20);
+            this.txtfechai.TabIndex = 18;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(247, 53);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(70, 20);
+            this.numericUpDown2.TabIndex = 17;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(323, 55);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Fecha Salida:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(323, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Fecha Ingrseso:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(113, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(124, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Cantidad de noches:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(113, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Cantidad de dias:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(247, 21);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(70, 20);
+            this.numericUpDown1.TabIndex = 12;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // txtfechar
             // 
             this.txtfechar.Location = new System.Drawing.Point(8, 39);
@@ -141,88 +223,6 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Fecha:";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(247, 21);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(70, 20);
-            this.numericUpDown1.TabIndex = 12;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(113, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Cantidad de dias:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(113, 55);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Cantidad de noches:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(323, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Fecha Ingrseso:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(323, 55);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Fecha Salida:";
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(247, 53);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(70, 20);
-            this.numericUpDown2.TabIndex = 17;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // txtfechai
-            // 
-            this.txtfechai.Location = new System.Drawing.Point(427, 26);
-            this.txtfechai.Name = "txtfechai";
-            this.txtfechai.Size = new System.Drawing.Size(99, 20);
-            this.txtfechai.TabIndex = 18;
-            // 
-            // txtfechas
-            // 
-            this.txtfechas.Location = new System.Drawing.Point(427, 55);
-            this.txtfechas.Name = "txtfechas";
-            this.txtfechas.Size = new System.Drawing.Size(99, 20);
-            this.txtfechas.TabIndex = 19;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
@@ -237,6 +237,26 @@
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion Cliente";
+            // 
+            // btnbuscarcliente
+            // 
+            this.btnbuscarcliente.BackColor = System.Drawing.Color.White;
+            this.btnbuscarcliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnbuscarcliente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnbuscarcliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscarcliente.ForeColor = System.Drawing.Color.White;
+            this.btnbuscarcliente.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnbuscarcliente.IconColor = System.Drawing.Color.Black;
+            this.btnbuscarcliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnbuscarcliente.IconSize = 16;
+            this.btnbuscarcliente.Location = new System.Drawing.Point(115, 46);
+            this.btnbuscarcliente.Name = "btnbuscarcliente";
+            this.btnbuscarcliente.Size = new System.Drawing.Size(53, 23);
+            this.btnbuscarcliente.TabIndex = 34;
+            this.btnbuscarcliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnbuscarcliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnbuscarcliente.UseVisualStyleBackColor = false;
+            this.btnbuscarcliente.Click += new System.EventHandler(this.btnbuscarcliente_Click);
             // 
             // txtnombrecliente
             // 
@@ -274,29 +294,10 @@
             this.label12.TabIndex = 10;
             this.label12.Text = "CI Cliente:";
             // 
-            // btnbuscarcliente
-            // 
-            this.btnbuscarcliente.BackColor = System.Drawing.Color.White;
-            this.btnbuscarcliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnbuscarcliente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnbuscarcliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnbuscarcliente.ForeColor = System.Drawing.Color.White;
-            this.btnbuscarcliente.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnbuscarcliente.IconColor = System.Drawing.Color.Black;
-            this.btnbuscarcliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnbuscarcliente.IconSize = 16;
-            this.btnbuscarcliente.Location = new System.Drawing.Point(115, 46);
-            this.btnbuscarcliente.Name = "btnbuscarcliente";
-            this.btnbuscarcliente.Size = new System.Drawing.Size(53, 23);
-            this.btnbuscarcliente.TabIndex = 34;
-            this.btnbuscarcliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnbuscarcliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnbuscarcliente.UseVisualStyleBackColor = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.iconButton1);
+            this.groupBox2.Controls.Add(this.btnbuscarhab);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.textBox2);
@@ -312,24 +313,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informacion Habitacion";
             // 
-            // iconButton1
+            // btnbuscarhab
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.White;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(151, 50);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(53, 23);
-            this.iconButton1.TabIndex = 43;
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnbuscarhab.BackColor = System.Drawing.Color.White;
+            this.btnbuscarhab.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnbuscarhab.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnbuscarhab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscarhab.ForeColor = System.Drawing.Color.White;
+            this.btnbuscarhab.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnbuscarhab.IconColor = System.Drawing.Color.Black;
+            this.btnbuscarhab.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnbuscarhab.IconSize = 16;
+            this.btnbuscarhab.Location = new System.Drawing.Point(151, 50);
+            this.btnbuscarhab.Name = "btnbuscarhab";
+            this.btnbuscarhab.Size = new System.Drawing.Size(53, 23);
+            this.btnbuscarhab.TabIndex = 43;
+            this.btnbuscarhab.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnbuscarhab.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnbuscarhab.UseVisualStyleBackColor = false;
+            this.btnbuscarhab.Click += new System.EventHandler(this.btnbuscarhab_Click);
             // 
             // textBox1
             // 
@@ -465,23 +467,6 @@
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
             // 
-            // btnagregar
-            // 
-            this.btnagregar.BackColor = System.Drawing.Color.Silver;
-            this.btnagregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnagregar.ForeColor = System.Drawing.Color.Black;
-            this.btnagregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnagregar.IconColor = System.Drawing.Color.Green;
-            this.btnagregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnagregar.Location = new System.Drawing.Point(825, 171);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(122, 70);
-            this.btnagregar.TabIndex = 36;
-            this.btnagregar.Text = "Agregar";
-            this.btnagregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnagregar.UseVisualStyleBackColor = false;
-            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(802, 398);
@@ -555,6 +540,23 @@
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
+            // btnagregar
+            // 
+            this.btnagregar.BackColor = System.Drawing.Color.Silver;
+            this.btnagregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnagregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnagregar.ForeColor = System.Drawing.Color.Black;
+            this.btnagregar.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnagregar.IconColor = System.Drawing.Color.Green;
+            this.btnagregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnagregar.Location = new System.Drawing.Point(825, 171);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Size = new System.Drawing.Size(122, 70);
+            this.btnagregar.TabIndex = 36;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnagregar.UseVisualStyleBackColor = false;
+            // 
             // frmRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,8 +581,8 @@
             this.Text = "frmRegistrar";
             this.rgbhospedaje.ResumeLayout(false);
             this.rgbhospedaje.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -614,7 +616,7 @@
         private System.Windows.Forms.Label label12;
         private FontAwesome.Sharp.IconButton btnbuscarcliente;
         private System.Windows.Forms.GroupBox groupBox2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnbuscarhab;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox2;

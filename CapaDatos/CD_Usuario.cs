@@ -52,7 +52,7 @@ namespace CapaDatos
 
         public int Registrar( Usuario obj, out string Mensaje)
         {
-            int idusuariogenerado = 0;
+            int id_usuarioResultado = 0;
             Mensaje = string.Empty;
 
             try
@@ -69,28 +69,28 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("id_rol", obj.oRol.id_rol);
                     cmd.Parameters.AddWithValue("estado", obj.estado);
 
-                    cmd.Parameters.Add("idusuariogenerado",SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("id_usuarioResultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar,500).Direction = ParameterDirection.Output;
 
-                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     oconexion.Open();
 
                     cmd.ExecuteNonQuery();
-                    idusuariogenerado = Convert.ToInt32( cmd.Parameters["idusuariogenerado"].Value);
-                    Mensaje = cmd.Parameters["mensaje"].Value.ToString();
+                    id_usuarioResultado = Convert.ToInt32( cmd.Parameters["id_usuarioResultado"].Value);
+                    Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
 
                 }
             }
             catch (Exception ex)
             {
-                idusuariogenerado = 0;
+                id_usuarioResultado = 0;
                 Mensaje = ex.Message;
             }
 
 
 
-            return idusuariogenerado;
+            return id_usuarioResultado;
         }
 
         public bool Editar(Usuario obj, out string Mensaje)
@@ -114,9 +114,9 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("estado", obj.estado);
 
                     cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("mensaje", SqlDbType.VarChar,500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar,500).Direction = ParameterDirection.Output;
 
-                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     oconexion.Open();
 
@@ -154,7 +154,7 @@ namespace CapaDatos
                     cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("mensaje", SqlDbType.VarChar,500).Direction = ParameterDirection.Output;
 
-                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     oconexion.Open();
 

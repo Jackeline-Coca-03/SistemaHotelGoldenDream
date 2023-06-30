@@ -16,5 +16,17 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void btnbuscarcliente_Click(object sender, EventArgs e)
+        {
+            frmbuscarCliente bc = new frmbuscarCliente();
+            bc.ShowDialog();
+        }
+
+        private void btnbuscarhab_Click(object sender, EventArgs e)
+        {
+            frmbuscarHabitacion bh = new frmbuscarHabitacion();
+            bh.ShowDialog();
+        }
     }
 }

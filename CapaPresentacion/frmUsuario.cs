@@ -80,22 +80,50 @@ namespace CapaPresentacion
                 oRol = new Rol() { id_rol = Convert.ToInt32(((OpcionCombo)cbmrol.SelectedItem).Valor)},
                 estado = Convert.ToInt32(((OpcionCombo)cbmestado.SelectedItem).Valor) == 1 ? true : false
             };
-            int idusuariogenerado = new CN_Usuario().Registrar(objusuario, out mensaje);
 
-            if(idusuariogenerado != 0)
+            if (objusuario.id_usuario == 0)
             {
-                dgvdata.Rows.Add(new object[] { "", idusuariogenerado,txtnombre.Text,txtci.Text,txtcuenta.Text,txtpassword.Text,
-                ((OpcionCombo)cbmrol.SelectedItem).Valor.ToString(),
-                ((OpcionCombo)cbmrol.SelectedItem).Texto.ToString(),
-                ((OpcionCombo)cbmestado.SelectedItem).Valor.ToString(),
-                ((OpcionCombo)cbmestado.SelectedItem).Texto.ToString()
-                });
-                limpiar();
+                int idusuariogenerado = new CN_Usuario().Registrar(objusuario, out mensaje);
+
+                if(idusuariogenerado != 0)
+                {
+                    dgvdata.Rows.Add(new object[] { "", idusuariogenerado,txtnombre.Text,txtci.Text,txtcuenta.Text,txtpassword.Text,
+                    ((OpcionCombo)cbmrol.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cbmrol.SelectedItem).Texto.ToString(),
+                    ((OpcionCombo)cbmestado.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cbmestado.SelectedItem).Texto.ToString()
+                    });
+                    limpiar();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
             }
             else
             {
-                MessageBox.Show(mensaje);
+                bool resultado = new CN_Usuario().Editar(objusuario, out mensaje);
+                if (resultado)
+                {
+                    DataGridViewRow row = dgvdata.Rows[Convert.ToInt32(txtindice.Text)];
+                    row.Cells["Id"].Value = txtidusuario.Text;
+                    row.Cells["ci"].Value = txtci.Text;
+                    row.Cells["nombre"].Value = txtnombre.Text;
+                    row.Cells["cuenta"].Value = txtcuenta.Text;
+                    row.Cells["password"].Value = txtpassword.Text;
+                    row.Cells["id_rol"].Value = ((OpcionCombo)cbmrol.SelectedItem).Valor.ToString();
+                    row.Cells["rol"].Value = ((OpcionCombo)cbmrol.SelectedItem).Texto.ToString();
+                    row.Cells["estadovalor"].Value = ((OpcionCombo)cbmestado.SelectedItem).Valor.ToString();
+                    row.Cells["estado"].Value = ((OpcionCombo)cbmestado.SelectedItem).Texto.ToString();
+                    limpiar();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
             }
+
+            
             
             
         }
@@ -111,6 +139,8 @@ namespace CapaPresentacion
             txtconfirmarpassword.Text = "";
             cbmrol.SelectedIndex = 0;
             cbmestado.SelectedIndex = 0;
+            
+            txtci.Select();
         }
 
         private void dgvdata_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -167,6 +197,31 @@ namespace CapaPresentacion
 
                 e.Graphics.DrawImage(Properties.Resources.Check, new Rectangle(x, y, w, h));
                 e.Handled = true;
+            }
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            if(Convert.ToInt32(txtidusuario.Text) != 0)
+            {
+                if(MessageBox.Show("Desea eliminar el usuario","Mensaje",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string mensaje = string.Empty;
+                    Usuario objusuario = new Usuario()
+                    {
+                        id_usuario = Convert.ToInt32(txtidusuario.Text)
+                    };
+                    bool respuesta = new CN_Usuario().Eliminar(objusuario, out mensaje);
+
+                    if (respuesta)
+                    {
+                        dgvdata.Rows.RemoveAt(Convert.ToInt32(txtindice.Text));
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
             }
         }
     }
