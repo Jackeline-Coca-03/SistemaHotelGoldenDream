@@ -31,6 +31,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvdata = new System.Windows.Forms.DataGridView();
+            this.fechar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeror = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.montotot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarior = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cicliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.btnlimpiarbuscador = new FontAwesome.Sharp.IconButton();
             this.btnbuscar = new FontAwesome.Sharp.IconButton();
@@ -44,16 +54,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.fechar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeror = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.montotot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarior = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cicliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +61,7 @@
             // 
             this.dgvdata.AllowUserToAddRows = false;
             this.dgvdata.AllowUserToDeleteRows = false;
+            this.dgvdata.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,6 +93,72 @@
             this.dgvdata.RowTemplate.Height = 28;
             this.dgvdata.Size = new System.Drawing.Size(923, 287);
             this.dgvdata.TabIndex = 49;
+            // 
+            // fechar
+            // 
+            this.fechar.HeaderText = "Fecha Registro";
+            this.fechar.Name = "fechar";
+            this.fechar.ReadOnly = true;
+            this.fechar.Width = 120;
+            // 
+            // numeror
+            // 
+            this.numeror.HeaderText = "Numero Registro";
+            this.numeror.Name = "numeror";
+            this.numeror.ReadOnly = true;
+            this.numeror.Width = 130;
+            // 
+            // montotot
+            // 
+            this.montotot.HeaderText = "Monto Total";
+            this.montotot.Name = "montotot";
+            this.montotot.ReadOnly = true;
+            // 
+            // usuarior
+            // 
+            this.usuarior.HeaderText = "Usuario Registro";
+            this.usuarior.Name = "usuarior";
+            this.usuarior.ReadOnly = true;
+            this.usuarior.Width = 150;
+            // 
+            // cicliente
+            // 
+            this.cicliente.HeaderText = "CI cliente";
+            this.cicliente.Name = "cicliente";
+            this.cicliente.ReadOnly = true;
+            // 
+            // numeroh
+            // 
+            this.numeroh.HeaderText = "Numero Habitacion";
+            this.numeroh.Name = "numeroh";
+            this.numeroh.ReadOnly = true;
+            this.numeroh.Width = 150;
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Codigo habitacion";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 150;
+            // 
+            // precioh
+            // 
+            this.precioh.HeaderText = "Precio habitacion";
+            this.precioh.Name = "precioh";
+            this.precioh.ReadOnly = true;
+            this.precioh.Width = 150;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            // 
+            // subtotal
+            // 
+            this.subtotal.HeaderText = "Subtotal";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
             // 
             // label10
             // 
@@ -255,72 +322,6 @@
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // fechar
-            // 
-            this.fechar.HeaderText = "Fecha Registro";
-            this.fechar.Name = "fechar";
-            this.fechar.ReadOnly = true;
-            this.fechar.Width = 120;
-            // 
-            // numeror
-            // 
-            this.numeror.HeaderText = "Numero Registro";
-            this.numeror.Name = "numeror";
-            this.numeror.ReadOnly = true;
-            this.numeror.Width = 130;
-            // 
-            // montotot
-            // 
-            this.montotot.HeaderText = "Monto Total";
-            this.montotot.Name = "montotot";
-            this.montotot.ReadOnly = true;
-            // 
-            // usuarior
-            // 
-            this.usuarior.HeaderText = "Usuario Registro";
-            this.usuarior.Name = "usuarior";
-            this.usuarior.ReadOnly = true;
-            this.usuarior.Width = 150;
-            // 
-            // cicliente
-            // 
-            this.cicliente.HeaderText = "CI cliente";
-            this.cicliente.Name = "cicliente";
-            this.cicliente.ReadOnly = true;
-            // 
-            // numeroh
-            // 
-            this.numeroh.HeaderText = "Numero Habitacion";
-            this.numeroh.Name = "numeroh";
-            this.numeroh.ReadOnly = true;
-            this.numeroh.Width = 150;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Codigo habitacion";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            this.codigo.Width = 150;
-            // 
-            // precioh
-            // 
-            this.precioh.HeaderText = "Precio habitacion";
-            this.precioh.Name = "precioh";
-            this.precioh.ReadOnly = true;
-            this.precioh.Width = 150;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            // 
-            // subtotal
-            // 
-            this.subtotal.HeaderText = "Subtotal";
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
             // 
             // frmReportes
             // 
