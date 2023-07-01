@@ -101,5 +101,130 @@ namespace CapaPresentacion
                 }
             }
         }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            string columnafiltro = ((OpcionCombo)cbmbuscar.SelectedItem).Valor.ToString();
+            if (dgvdata.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgvdata.Rows)
+                {
+                    if (row.Cells[columnafiltro].Value.ToString().Trim().ToUpper().Contains(txtbuscar.Text.Trim().ToUpper()))
+                    {
+                        row.Visible = true;
+                    }
+                    else
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            string mensaje = string.Empty;
+            Habitacion objhabitacion = new Habitacion()
+            {
+                id_hab = Convert.ToInt32(txtidhab.Text),
+                codigohab = Convert.ToInt32(txtcodigo.Text),
+                descripcion = txtnumero.Text,
+                cantCamas = Convert.ToInt32(txtcantidad.Text),
+                num_personas = Convert.ToInt32(txtpersona.Text),
+                precio = Convert.ToDecimal(txtprecio.Text),
+                estado = Convert.ToInt32(((OpcionCombo)cbmestado.SelectedItem).Valor) == 1 ? true : false
+            };
+
+            if (objhabitacion.id_hab == 0)
+            {
+                int id_habitacionResultado = new CN_Habitacion().Registrar(objhabitacion, out mensaje);
+
+                if (id_habitacionResultado != 0)
+                {
+                    dgvdata.Rows.Add(new object[] { "", id_habitacionResultado,txtcodigo.Text,txtnumero.Text,txtcantidad.Text,txtpersona.Text, txtprecio.Text,              
+                    ((OpcionCombo)cbmestado.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cbmestado.SelectedItem).Texto.ToString()
+                    });
+                    limpiar();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
+            }
+            else
+            {
+                bool resultado = new CN_Habitacion().Editar(objhabitacion, out mensaje);
+                if (resultado)
+                {
+                    DataGridViewRow row = dgvdata.Rows[Convert.ToInt32(txtindice.Text)];
+                    row.Cells["Id"].Value = txtidhab.Text;
+                    row.Cells["codigo"].Value = txtcodigo.Text;
+                    row.Cells["numero"].Value = txtnumero.Text;
+                    row.Cells["cantidad"].Value = txtcantidad.Text;
+                    row.Cells["numeropersonas"].Value = txtpersona.Text;
+                    row.Cells["precio"].Value = txtprecio.Text;
+                    row.Cells["estadovalor"].Value = ((OpcionCombo)cbmestado.SelectedItem).Valor.ToString();
+                    row.Cells["estado"].Value = ((OpcionCombo)cbmestado.SelectedItem).Texto.ToString();
+                    limpiar();
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
+            }
+        }
+        private void limpiar()
+        {
+            txtindice.Text = "-1";
+            txtidhab.Text = "0";
+            txtcodigo.Text = "";
+            txtnumero.Text = "";
+            txtcantidad.Text = "";
+            txtpersona.Text = "";
+            txtprecio.Text = "";
+            cbmestado.SelectedIndex = 0;
+
+            txtcodigo.Select();
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(txtidhab.Text) != 0)
+            {
+                if (MessageBox.Show("Desea eliminar el usuario", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string mensaje = string.Empty;
+                    Habitacion objhabitacion = new Habitacion()
+                    {
+                        id_hab = Convert.ToInt32(txtidhab.Text)
+                    };
+                    bool respuesta = new CN_Habitacion().Eliminar(objhabitacion, out mensaje);
+
+                    if (respuesta)
+                    {
+                        dgvdata.Rows.RemoveAt(Convert.ToInt32(txtindice.Text));
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+            }
+        }
+
+        private void btnlimpiarbuscador_Click(object sender, EventArgs e)
+        {
+            txtbuscar.Text = "";
+            foreach (DataGridViewRow row in dgvdata.Rows)
+            {
+                row.Visible = true;
+            }
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
     }
 }
