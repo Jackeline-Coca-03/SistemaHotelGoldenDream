@@ -192,7 +192,7 @@ namespace CapaPresentacion
         {
             if (Convert.ToInt32(txtidhab.Text) != 0)
             {
-                if (MessageBox.Show("Desea eliminar el usuario", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Desea eliminar la habitacion", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string mensaje = string.Empty;
                     Habitacion objhabitacion = new Habitacion()

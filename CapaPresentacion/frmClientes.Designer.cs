@@ -28,17 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtindice = new System.Windows.Forms.TextBox();
-            this.txtidusuario = new System.Windows.Forms.TextBox();
+            this.txtidcliente = new System.Windows.Forms.TextBox();
             this.cbmbuscar = new System.Windows.Forms.ComboBox();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvdata = new System.Windows.Forms.DataGridView();
+            this.Btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ci = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadovalor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbmestado = new System.Windows.Forms.ComboBox();
-            this.txtcuenta = new System.Windows.Forms.TextBox();
+            this.txtcelular = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.txtci = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,13 +59,6 @@
             this.btneliminar = new FontAwesome.Sharp.IconButton();
             this.btnlimpiar = new FontAwesome.Sharp.IconButton();
             this.btnguardar = new FontAwesome.Sharp.IconButton();
-            this.Btnseleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ci = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadovalor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,14 +71,14 @@
             this.txtindice.Text = "-1";
             this.txtindice.Visible = false;
             // 
-            // txtidusuario
+            // txtidcliente
             // 
-            this.txtidusuario.Location = new System.Drawing.Point(200, 87);
-            this.txtidusuario.Name = "txtidusuario";
-            this.txtidusuario.Size = new System.Drawing.Size(28, 20);
-            this.txtidusuario.TabIndex = 63;
-            this.txtidusuario.Text = "0";
-            this.txtidusuario.Visible = false;
+            this.txtidcliente.Location = new System.Drawing.Point(200, 87);
+            this.txtidcliente.Name = "txtidcliente";
+            this.txtidcliente.Size = new System.Drawing.Size(28, 20);
+            this.txtidcliente.TabIndex = 63;
+            this.txtidcliente.Text = "0";
+            this.txtidcliente.Visible = false;
             // 
             // cbmbuscar
             // 
@@ -125,15 +125,15 @@
             // 
             this.dgvdata.AllowUserToAddRows = false;
             this.dgvdata.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Btnseleccionar,
@@ -147,12 +147,68 @@
             this.dgvdata.MultiSelect = false;
             this.dgvdata.Name = "dgvdata";
             this.dgvdata.ReadOnly = true;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvdata.RowTemplate.Height = 28;
             this.dgvdata.Size = new System.Drawing.Size(718, 387);
             this.dgvdata.TabIndex = 56;
+            this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellContentClick);
+            this.dgvdata.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvdata_CellPainting);
+            // 
+            // Btnseleccionar
+            // 
+            this.Btnseleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Btnseleccionar.FillWeight = 150F;
+            this.Btnseleccionar.HeaderText = "";
+            this.Btnseleccionar.Name = "Btnseleccionar";
+            this.Btnseleccionar.ReadOnly = true;
+            this.Btnseleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Btnseleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Btnseleccionar.Text = "    ";
+            this.Btnseleccionar.Width = 23;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id_cliente";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            this.Id.Width = 150;
+            // 
+            // ci
+            // 
+            this.ci.HeaderText = "CI";
+            this.ci.Name = "ci";
+            this.ci.ReadOnly = true;
+            this.ci.Width = 70;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre Completo";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 180;
+            // 
+            // celular
+            // 
+            this.celular.HeaderText = "Celular";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
+            this.celular.Width = 150;
+            // 
+            // estadovalor
+            // 
+            this.estadovalor.HeaderText = "Estado Valor";
+            this.estadovalor.Name = "estadovalor";
+            this.estadovalor.ReadOnly = true;
+            this.estadovalor.Visible = false;
+            // 
+            // estado
+            // 
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
             // 
             // cbmestado
             // 
@@ -163,12 +219,12 @@
             this.cbmestado.Size = new System.Drawing.Size(201, 21);
             this.cbmestado.TabIndex = 52;
             // 
-            // txtcuenta
+            // txtcelular
             // 
-            this.txtcuenta.Location = new System.Drawing.Point(33, 222);
-            this.txtcuenta.Name = "txtcuenta";
-            this.txtcuenta.Size = new System.Drawing.Size(201, 20);
-            this.txtcuenta.TabIndex = 48;
+            this.txtcelular.Location = new System.Drawing.Point(33, 222);
+            this.txtcelular.Name = "txtcelular";
+            this.txtcelular.Size = new System.Drawing.Size(201, 20);
+            this.txtcelular.TabIndex = 48;
             // 
             // txtnombre
             // 
@@ -266,6 +322,7 @@
             this.btnlimpiarbuscador.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnlimpiarbuscador.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnlimpiarbuscador.UseVisualStyleBackColor = false;
+            this.btnlimpiarbuscador.Click += new System.EventHandler(this.btnlimpiarbuscador_Click);
             // 
             // btnbuscar
             // 
@@ -285,6 +342,7 @@
             this.btnbuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnbuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnbuscar.UseVisualStyleBackColor = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btneliminar
             // 
@@ -305,6 +363,7 @@
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btneliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnlimpiar
             // 
@@ -325,6 +384,7 @@
             this.btnlimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnlimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnlimpiar.UseVisualStyleBackColor = false;
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
             // btnguardar
             // 
@@ -345,60 +405,7 @@
             this.btnguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnguardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnguardar.UseVisualStyleBackColor = false;
-            // 
-            // Btnseleccionar
-            // 
-            this.Btnseleccionar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Btnseleccionar.FillWeight = 150F;
-            this.Btnseleccionar.HeaderText = "";
-            this.Btnseleccionar.Name = "Btnseleccionar";
-            this.Btnseleccionar.ReadOnly = true;
-            this.Btnseleccionar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Btnseleccionar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Btnseleccionar.Text = "    ";
-            this.Btnseleccionar.Width = 23;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id_cliente";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            this.Id.Width = 150;
-            // 
-            // ci
-            // 
-            this.ci.HeaderText = "CI";
-            this.ci.Name = "ci";
-            this.ci.ReadOnly = true;
-            this.ci.Width = 70;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre Completo";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 180;
-            // 
-            // celular
-            // 
-            this.celular.HeaderText = "Celular";
-            this.celular.Name = "celular";
-            this.celular.ReadOnly = true;
-            this.celular.Width = 150;
-            // 
-            // estadovalor
-            // 
-            this.estadovalor.HeaderText = "Estado Valor";
-            this.estadovalor.Name = "estadovalor";
-            this.estadovalor.ReadOnly = true;
-            this.estadovalor.Visible = false;
-            // 
-            // estado
-            // 
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // frmClientes
             // 
@@ -407,7 +414,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1042, 531);
             this.Controls.Add(this.txtindice);
-            this.Controls.Add(this.txtidusuario);
+            this.Controls.Add(this.txtidcliente);
             this.Controls.Add(this.btnlimpiarbuscador);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.cbmbuscar);
@@ -419,7 +426,7 @@
             this.Controls.Add(this.btnlimpiar);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.cbmestado);
-            this.Controls.Add(this.txtcuenta);
+            this.Controls.Add(this.txtcelular);
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.txtci);
             this.Controls.Add(this.label9);
@@ -430,6 +437,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmClientes";
             this.Text = "frmClientes";
+            this.Load += new System.EventHandler(this.frmClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -439,7 +447,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtindice;
-        private System.Windows.Forms.TextBox txtidusuario;
+        private System.Windows.Forms.TextBox txtidcliente;
         private FontAwesome.Sharp.IconButton btnlimpiarbuscador;
         private FontAwesome.Sharp.IconButton btnbuscar;
         private System.Windows.Forms.ComboBox cbmbuscar;
@@ -451,7 +459,7 @@
         private FontAwesome.Sharp.IconButton btnlimpiar;
         private FontAwesome.Sharp.IconButton btnguardar;
         private System.Windows.Forms.ComboBox cbmestado;
-        private System.Windows.Forms.TextBox txtcuenta;
+        private System.Windows.Forms.TextBox txtcelular;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.TextBox txtci;
         private System.Windows.Forms.Label label9;
